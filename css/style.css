@@ -1,0 +1,15 @@
+.table td {
+   text-align: center;
+}
+
+.table th {
+   text-align: center;
+}
+
+.monthSelector {
+  color: #555555;
+  padding-left: 3px;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #ffffff;
+}
