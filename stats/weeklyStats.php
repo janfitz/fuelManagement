@@ -14,6 +14,8 @@ $avgOverallPrice_WEEKLY = 0;
 $divKm = [];
 $counter= 0;
 $kms = 0;
+$kmStateFirst = 0;
+$kmStateLast = 0;
 $sumLiters = 0;
 
 

@@ -14,7 +14,7 @@
 if(isset($_GET['csvExport'])) {
   $fp = fopen('fuel.csv', 'w');
   $result = $db->query('SELECT * FROM fuel');
-  while($row = $result->fetchArray() ) {
+  while($row = $result->fetchArray()) {
     fputcsv($fp, $row);
   }
  fclose($fp);
@@ -27,7 +27,6 @@ if(isset($_GET['csvExport'])) {
  fpassthru($fp2);
  fclose($fp2);
  unlink("fuel.csv");
-
 }
 
 /*
@@ -103,31 +102,14 @@ if(isset($_GET['delete'])) {
 }
 
 /*
-* Manage record editing
-*/
-
-if(isset($_GET['edit'])) {
-  $editID = $_GET['edit'];
-
-  $result = $db->exec("DELETE FROM fuel WHERE id='$deleteID'");
-  if(!$result) {
-    echo $db->lastErrorMsg();
-  }
-  else {
-    $alertType = "success";
-    $alertMsg = "Record ID " . $editID . " edited successfully!";
-  }
-}
-
-/*
 * Generating history table content
 */
 
 if(isset($_GET['tableLimit'])) {
-  $sql = "SELECT * from fuel";
+  $sql = "SELECT * from fuel ORDER BY id DESC";
 }
 else {
-  $sql = "SELECT * from fuel LIMIT 5";
+  $sql = "SELECT * from fuel ORDER BY id DESC";
 }
 
 $tableContent = "";
