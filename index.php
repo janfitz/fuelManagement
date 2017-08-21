@@ -1,5 +1,5 @@
 <?php
-  include 'auth.php';
+  //include 'auth.php';
 
   // Start using session
   session_start();
