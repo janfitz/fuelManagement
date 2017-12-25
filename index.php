@@ -1,5 +1,5 @@
 <?php
-  include 'auth.php';
+  //include 'auth.php';
 
   // Start using session
   session_start();
@@ -166,21 +166,14 @@
             <div class="panel-heading">
               <div class="row">
                 <div class="col-md-6">
-                  Monthly <!-- (<?php echo date("F"); ?>) -->
+                  Monthly (<?php echo date("F"); ?>)
                 </div>
-                <!--
-                <div class="col-md-6">
-                  <select class="monthSelector" placeholder="Select Month" id="month" name="month">
-                    <?php echo $monthSelector; ?>
-                  </select>
-                </div>
-                -->
               </div>
             </div>
             <div class="panel-body">
               <ul class="list-group">
                 <?php
-                  // If monthly consumption value if better than overall avarage display as green else red
+                  // If monthly consumption value if better than overall avarage, display as green else red
                   if($avgConsumption_MONTHLY <= $avgConsumption_OVERALL) {
                     echo "<li class='list-group-item list-group-item-success'>";
                   }
@@ -204,7 +197,7 @@
               <div class="panel-body">
                 <ul class="list-group">
                   <?php
-                    // If weekly consumption value if better than overall avarage display as green else red
+                    // If weekly consumption value if better than overall avarage, display as green else red
                     if($avgConsumption_WEEKLY <= $avgConsumption_OVERALL) {
                       echo "<li class='list-group-item list-group-item-success'>";
                     }
@@ -257,7 +250,7 @@
       </div>
     </div>
 
-    <!-- PHH file with modals -->
+    <!-- PHP file with modals -->
     <?php include 'modals.php'; ?>
 
     <!-- javascript files -->
