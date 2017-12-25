@@ -124,10 +124,10 @@ if(isset($_GET['edit'])) {
 */
 
 if(isset($_GET['tableLimit'])) {
-  $sql = "SELECT * from fuel";
+  $sql = "SELECT * from fuel ORDER BY id DESC";
 }
 else {
-  $sql = "SELECT * from fuel LIMIT 5";
+  $sql = "SELECT * from fuel ORDER BY id DESC";
 }
 
 $tableContent = "";

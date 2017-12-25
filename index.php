@@ -247,11 +247,12 @@
              <?php echo $tableContent; ?>
            </table>
           </div>
-
+	  <!--
           <form action="index.php" method="get">
            <input type="text" style="display: none;" value="moreContent" name="tableLimit">
            <button type="submit" class="btn btn-default">Show complete history</button>
           </form>
+	  -->
         </div>
       </div>
     </div>
